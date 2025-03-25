@@ -1,0 +1,470 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Root Variables */
+:root {
+    --bg-color: white;
+    --snd-bg-color: #D4ECDD;
+    --text-color: #285430;
+    --highlight-color: #5C8374;
+    --accent-color: #A0C49D;
+}
+
+/* Base Styles */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/* ========================== HEADER ========================== */
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    background: var(--highlight-color);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--bg-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar a {
+    font-size: 1.9rem;
+    color: var(--bg-color);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text-color);
+}
+
+/* ========================== HOME SECTION ========================== */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-img img {
+    width: 220px;
+    border-radius: 50%;
+    border: 3px solid var(--highlight-color);
+    box-shadow: 0 0 25px var(--highlight-color);
+    transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 35px var(--highlight-color),
+                0 0 55px var(--highlight-color);
+}
+
+.home-content h3 {
+    font-size: 3.7rem;
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--highlight-color);
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--highlight-color);
+    border-radius: 4rem;
+    box-shadow: none;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 1.6rem var(--highlight-color);
+}
+
+/* ========================== ABOUT SECTION ========================== */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--snd-bg-color);
+}
+
+.about-img img {
+    width: 230px;
+    border: 3px solid var(--highlight-color);
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--highlight-color);
+    transition: 0.4s ease-in-out;
+}
+
+.about-content {
+    padding: 0 4rem;
+}
+
+.about-content h2 {
+    font-size: 6rem;
+    color: var(--highlight-color);
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+/* ========================== SKILLS SECTION ========================== */
+
+.skills h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--highlight-color);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.9rem;
+}
+
+.skills-box {
+    background: var(--snd-bg-color);
+    color: var(--highlight-color);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--highlight-color);
+    font-size: 4.8rem;
+    font-weight: 300;
+}
+
+/* ========================== INTERNSHIP SECTION ========================== */
+
+.internships {
+    background: var(--snd-bg-color);
+    padding: 6rem 9%;
+    text-align: center;
+}
+
+.internships h2 {
+    font-size: 4.5rem;
+    color: var(--highlight-color);
+    margin-bottom: 3rem;
+}
+
+.internship-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.internship-card {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--highlight-color);
+    font-size: 1.8rem;
+    width: 500px;
+    text-align: left;
+    transition: 0.3s ease-in-out;
+}
+
+.internship-card h3 {
+    font-size: 2.2rem;
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+}
+
+.internship-card p {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.internship-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--highlight-color);
+}
+/* ========================== PROJECTS SECTION ========================== */
+
+.projects {
+    background: var(--snd-bg-color);
+    padding: 6rem 9%;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 4.5rem;
+    color: var(--highlight-color);
+    margin-bottom: 3rem;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--highlight-color);
+    font-size: 1.8rem;
+    width: 500px;
+    text-align: left;
+    transition: 0.3s ease-in-out;
+}
+
+.project-card h3 {
+    font-size: 2.2rem;
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--highlight-color);
+}
+/* ========================== CONTACT SECTION ========================== */
+
+.contact {
+    background-color: var(--bg-color);
+    padding: 6rem 9%;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 4.5rem;
+    color: var(--highlight-color);
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 80rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: 0.8rem;
+    border: 0.25rem solid var(--highlight-color);
+    margin: 0.7rem 0;
+    resize: none;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+    background: var(--highlight-color);
+    color: var(--bg-color);
+    padding: 1.2rem 3rem;
+    border-radius: 5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.contact form .btn:hover {
+    box-shadow: 0 0 10px var(--highlight-color);
+    transform: scale(1.05);
+}
+/* ========================== FOOTER SECTION ========================== */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--snd-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 1.8rem;
+    color: var(--highlight-color);
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    font-size: 2rem;
+    color: var(--highlight-color);
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .social-icons a:hover {
+    color: var(--text-color);
+    transform: scale(1.2);
+}
+/* Responsive Design for Oppo A38 (720x1612) */
+@media (max-width: 720px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        padding: 1.5rem 4%;
+    }
+
+    .navbar a {
+        font-size: 1.6rem;
+        margin-left: 2rem;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 180px;
+    }
+
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.4rem;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem 5%;
+    }
+
+    .about-content h2 {
+        font-size: 4rem;
+    }
+
+    .about-content p {
+        font-size: 1.4rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-box {
+        font-size: 3.5rem;
+        padding: 10px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .internship-container,
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .internship-card,
+    .project-card {
+        width: 90%;
+        font-size: 1.6rem;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+
+    .contact form textarea {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .footer p {
+        font-size: 1.5rem;
+    }
+}
